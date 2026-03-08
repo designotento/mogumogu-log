@@ -1,11 +1,202 @@
-<h2>今日のごはん</h2>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おてんとちゃんのもぐもぐログ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      background: #f7f3ef;
+      color: #333;
+    }
 
-<ul>
-<li>白米</li>
-<li>ほうれん草</li>
-<li>かぼちゃ</li>
-</ul>
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px;
+    }
 
-<h2>こてんとちゃんメモ</h2>
+    .header {
+      background: white;
+      border-bottom: 1px solid #eee;
+    }
 
-<p>今日はほうれん草を少し食べた。</p>
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 18px;
+      color: #f06d3a;
+    }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+      color: #666;
+      flex-wrap: wrap;
+    }
+
+    .hero {
+      background: #e9cdbf;
+      border-radius: 20px;
+      padding: 48px 24px;
+      text-align: center;
+      margin-top: 28px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: 36px;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      margin: 0 0 20px;
+      color: #5f4a42;
+      font-size: 16px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #f06d3a;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    h2.section-title {
+      margin-top: 40px;
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+
+    .quick-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+    }
+
+    .nav-card, .post-card {
+      background: white;
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .nav-card {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .post-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .post-card p {
+      margin: 6px 0;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      margin-top: 48px;
+      background: #13213a;
+      color: white;
+      padding: 28px 24px;
+    }
+
+    .footer-inner {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .footer p {
+      margin: 8px 0 0;
+      color: #d5dbea;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav">
+      <div class="logo">もぐもぐログ</div>
+      <div class="menu">
+        <span>ごはん</span>
+        <span>食べたもの</span>
+        <span>食べなかったもの</span>
+        <span>偏食メモ</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero">
+      <h1>おてんとちゃんのもぐもぐログ</h1>
+      <p>偏食っ子こてんとちゃんとのリアルごはん記録</p>
+      <a href="#recent" class="button">今日のごはんを見る</a>
+    </section>
+
+    <h2 class="section-title">クイックナビ</h2>
+    <section class="quick-nav">
+      <div class="nav-card">今日のごはん</div>
+      <div class="nav-card">食べたもの</div>
+      <div class="nav-card">食べなかったもの</div>
+      <div class="nav-card">偏食メモ</div>
+    </section>
+
+    <h2 class="section-title" id="recent">最近のごはん</h2>
+    <section class="posts">
+      <article class="post-card">
+        <h3>今日のごはん（例）</h3>
+        <p>白米 / ほうれん草 / かぼちゃ</p>
+        <p>今日は白米をしっかり食べて、かぼちゃは少しだけ。</p>
+      </article>
+
+      <article class="post-card">
+        <h3>ブロッコリーの日</h3>
+        <p>新しい野菜に挑戦した日。</p>
+        <p>見ただけで終わったけど、お皿にはのせられた。</p>
+      </article>
+
+      <article class="post-card">
+        <h3>ヨーグルト食べず</h3>
+        <p>今日も乳製品はむずかしかった日。</p>
+        <p>でも果物はしっかり食べられた。</p>
+      </article>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <strong>おてんとちゃんのもぐもぐログ</strong>
+      <p>偏食っ子こてんとちゃんとのリアルごはん記録ブログ。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
